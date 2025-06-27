@@ -1,5 +1,5 @@
 ## Barbell Math
 
-This project contains a simple barbell loading calculator. Converts a number (lb) to the equivalent loaded barbell. Accessable via github page (hopefully). 
+This project contains a simple barbell loading calculator. Converts a number (lb) to the equivalent loaded barbell. Accessable via github page. 
 
-Made in Godot 4.4 in April 2025, in a single sitting.
+Made in Godot 4.4
