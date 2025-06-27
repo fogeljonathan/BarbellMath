@@ -16,6 +16,12 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 run/low_processor_mode=true
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=792
+window/size/viewport_height=792
+window/stretch/mode="canvas_items"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

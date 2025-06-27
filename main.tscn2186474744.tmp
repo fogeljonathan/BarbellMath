@@ -37,58 +37,8 @@ layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
 
-[node name="minus110" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "-
-110
--"
-
-[node name="minus90" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "-
-90
--"
-
-[node name="minus70" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "-
-70
--"
-
-[node name="minus50" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "-
-50
--"
-
-[node name="minus20" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "-
-20
--"
-
-[node name="minus10" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "-
-10
--"
-
-[node name="minus5" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "-
-5
--"
-
 [node name="lbinput" type="SpinBox" parent="VBoxContainer/hbox1"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 min_value = 45.0
 max_value = 955.0
@@ -102,58 +52,10 @@ custom_arrow_step = 5.0
 [node name="lbslineedit" type="LineEdit" parent="VBoxContainer/hbox1"]
 layout_mode = 2
 text = "45"
+placeholder_text = "LBS"
 alignment = 1
 emoji_menu_enabled = false
 middle_mouse_paste_enabled = false
-
-[node name="plus5" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "+
-5
-+"
-
-[node name="plus10" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "+
-10
-+"
-
-[node name="plus20" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "+
-20
-+"
-
-[node name="plus50" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "+
-50
-+"
-
-[node name="plus70" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "+
-70
-+"
-
-[node name="plus90" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "+
-90
-+"
-
-[node name="plus110" type="Button" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(45, 0)
-layout_mode = 2
-text = "+
-110
-+"
 
 [node name="barbelldisplay" type="Control" parent="VBoxContainer"]
 layout_mode = 2
@@ -167,10 +69,6 @@ anchors_preset = -1
 anchor_top = 0.469
 anchor_right = 0.775
 anchor_bottom = 0.531
-offset_left = -10.0
-offset_top = -0.154999
-offset_right = 0.5
-offset_bottom = 0.154999
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -255,20 +153,5 @@ vertical_alignment = 1
 uppercase = true
 
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="pressed" from="VBoxContainer/hbox1/minus110" to="." method="_on_minus_110_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/minus90" to="." method="_on_minus_90_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/minus70" to="." method="_on_minus_70_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/minus50" to="." method="_on_minus_50_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/minus20" to="." method="_on_minus_20_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/minus10" to="." method="_on_minus_10_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/minus5" to="." method="_on_minus_5_pressed"]
 [connection signal="value_changed" from="VBoxContainer/hbox1/lbinput" to="." method="_on_lbinput_value_changed"]
 [connection signal="text_changed" from="VBoxContainer/hbox1/lbslineedit" to="." method="_on_lbslineedit_text_changed"]
-[connection signal="text_submitted" from="VBoxContainer/hbox1/lbslineedit" to="." method="_on_lbslineedit_text_submitted"]
-[connection signal="pressed" from="VBoxContainer/hbox1/plus5" to="." method="_on_plus_5_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/plus10" to="." method="_on_plus_10_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/plus20" to="." method="_on_plus_20_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/plus50" to="." method="_on_plus_50_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/plus70" to="." method="_on_plus_70_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/plus90" to="." method="_on_plus_90_pressed"]
-[connection signal="pressed" from="VBoxContainer/hbox1/plus110" to="." method="_on_plus_110_pressed"]

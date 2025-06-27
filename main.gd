@@ -43,21 +43,24 @@ func calculate_plates(weight, barweight):
 	return counts
 
 func add_plate(color, weight):
+	var spot = VBoxContainer.new()
+	var plate = ColorRect.new()
+	plate.color = color
+	plate.custom_minimum_size.x = %barbellcollar.size.x * 1.5
 	var sizediff = 1.0
 	if weight < 25:
+		plate.custom_minimum_size.x = %barbellcollar.size.x
 		match weight:
 			10:
 				sizediff = .3
+				
 			5: 
 				sizediff = .4
 			2.5: 
 				sizediff = .48
 				
-	var spot = VBoxContainer.new()
 	
-	var plate = ColorRect.new()
-	plate.color = color
-	plate.custom_minimum_size.x = %barbellcollar.size.x
+	
 	plate.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	
 	if weight < 25:
@@ -106,3 +109,107 @@ func _on_lbinput_value_changed(value: float) -> void:
 	for r in platecounts["2.5"]:
 		add_plate(Color.LIME_GREEN, 2.5)
 	
+
+func _on_lbslineedit_text_changed(new_text: String) -> void:
+	var weight = string_to_weight(new_text)
+	$VBoxContainer/hbox1/lbslineedit.text = str(weight)
+	
+	var children = %weighthbox.get_children()
+	for child in children:
+		child.queue_free()
+	var platecounts = calculate_plates(weight, 45)
+	for r in platecounts["55"]:
+		add_plate(Color.DARK_RED, 55)
+	for r in platecounts["45"]:
+		add_plate(Color.DODGER_BLUE, 45)
+	for r in platecounts["35"]:
+		add_plate(Color.YELLOW, 35)
+	for r in platecounts["25"]:
+		add_plate(Color.LIME_GREEN, 25)
+	for r in platecounts["10"]:
+		add_plate(Color.WHITE, 10)
+	for r in platecounts["5"]:
+		add_plate(Color.DODGER_BLUE, 5)
+	for r in platecounts["2.5"]:
+		add_plate(Color.LIME_GREEN, 2.5)
+
+func string_to_weight(s:String):
+	if '-' in s:
+		return 45
+		
+	var justnums:String = ""
+	for c in s:
+		if c in ['0','1','2','3','4','5','6','7','8','9','-']:
+			justnums = justnums + c
+	var weight = clamp(snapped(int(justnums), 5), 45, 955)
+	return weight
+
+func _on_lbslineedit_text_submitted(new_text: String) -> void:
+	var weight = string_to_weight(new_text)
+	$VBoxContainer/hbox1/lbslineedit.text = str(weight)
+
+func _on_minus_110_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) - 110
+	_on_lbslineedit_text_changed(str(w))
+
+func _on_minus_90_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) - 90
+	_on_lbslineedit_text_changed(str(w))
+
+func _on_minus_70_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) - 70
+	_on_lbslineedit_text_changed(str(w))
+
+
+func _on_minus_50_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) - 50
+	_on_lbslineedit_text_changed(str(w))
+
+
+func _on_minus_20_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) - 20
+	_on_lbslineedit_text_changed(str(w))
+
+
+func _on_minus_10_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) - 10
+	_on_lbslineedit_text_changed(str(w))
+
+
+func _on_minus_5_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) - 5
+	_on_lbslineedit_text_changed(str(w))
+
+
+func _on_plus_5_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) + 5
+	_on_lbslineedit_text_changed(str(w))
+
+
+func _on_plus_10_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) + 10
+	_on_lbslineedit_text_changed(str(w))
+
+func _on_plus_20_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) + 20
+	_on_lbslineedit_text_changed(str(w))
+
+
+func _on_plus_50_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) + 50
+	_on_lbslineedit_text_changed(str(w))
+
+
+func _on_plus_70_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) + 70
+	_on_lbslineedit_text_changed(str(w))
+
+
+func _on_plus_90_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) + 90
+	_on_lbslineedit_text_changed(str(w))
+
+
+func _on_plus_110_pressed() -> void:
+	var w = string_to_weight($VBoxContainer/hbox1/lbslineedit.text) + 110
+	_on_lbslineedit_text_changed(str(w))
