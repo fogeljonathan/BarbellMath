@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4f4fs8dlbdgr"]
+[gd_scene load_steps=3 format=3 uid="uid://d4f4fs8dlbdgr"]
 
 [ext_resource type="Theme" uid="uid://diyc5ysdnreo7" path="res://gravity.tres" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://ce8jtq8axohv2" path="res://main.gd" id="1_ig7tw"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_0xm2m"]
-font_size = 10
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -39,130 +36,116 @@ grow_vertical = 2
 
 [node name="hbox1" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 alignment = 1
 
 [node name="minus110" type="Button" parent="VBoxContainer/hbox1"]
 modulate = Color(0.545098, 0, 0, 1)
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "-
 110
-(55s)
 -"
 
 [node name="minus90" type="Button" parent="VBoxContainer/hbox1"]
 modulate = Color(0.117647, 0.564706, 1, 1)
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "-
 90
-(45s)
 -"
 
 [node name="minus70" type="Button" parent="VBoxContainer/hbox1"]
 modulate = Color(1, 1, 0, 1)
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "-
 70
-(35s)
 -"
 
 [node name="minus50" type="Button" parent="VBoxContainer/hbox1"]
 modulate = Color(0.196078, 0.803922, 0.196078, 1)
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "-
 50
-(25s)
 -"
 
 [node name="minus20" type="Button" parent="VBoxContainer/hbox1"]
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "-
 20
-(10s)
 -"
 
 [node name="minus10" type="Button" parent="VBoxContainer/hbox1"]
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "-
 10
-(5s)
 -"
 
 [node name="minus5" type="Button" parent="VBoxContainer/hbox1"]
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "-
 5
-(2.5s)
 -"
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/hbox1"]
-custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
 [node name="plus5" type="Button" parent="VBoxContainer/hbox1"]
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "+
 5
-(2.5s)
 +"
 
 [node name="plus10" type="Button" parent="VBoxContainer/hbox1"]
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "+
 10
-(5s)
 +"
 
 [node name="plus20" type="Button" parent="VBoxContainer/hbox1"]
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "+
 20
-(10s)
 +"
 
 [node name="plus50" type="Button" parent="VBoxContainer/hbox1"]
 modulate = Color(0.196078, 0.803922, 0.196078, 1)
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "+
 50
-(25s)
 +"
 
 [node name="plus70" type="Button" parent="VBoxContainer/hbox1"]
 modulate = Color(1, 1, 0, 1)
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "+
 70
-(35s)
 +"
 
 [node name="plus90" type="Button" parent="VBoxContainer/hbox1"]
 modulate = Color(0.117647, 0.564706, 1, 1)
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "+
 90
-(45s)
 +"
 
 [node name="plus110" type="Button" parent="VBoxContainer/hbox1"]
 modulate = Color(0.545098, 0, 0, 1)
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 text = "+
 110
-(55s)
 +"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -188,7 +171,6 @@ alignment = 1
 [node name="kgslineedit" type="LineEdit" parent="VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-text = "22.0"
 alignment = 1
 emoji_menu_enabled = false
 middle_mouse_paste_enabled = false
@@ -282,8 +264,6 @@ uppercase = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "Lb- Centric Barbell Calculator
-Enter weight (lb or kg), or use buttons (lb) to begin "
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
@@ -294,9 +274,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Jonathan Fogel
 Godot 4.4, 2025"
-label_settings = SubResource("LabelSettings_0xm2m")
-horizontal_alignment = 2
-vertical_alignment = 2
+horizontal_alignment = 1
+vertical_alignment = 1
 uppercase = true
 
 [connection signal="ready" from="." to="." method="_on_ready"]
